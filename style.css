@@ -1,0 +1,460 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Seção do cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 50%;
+    z-index: 9999;
+}
+
+.logo {
+    width: 150px;
+    /* Adjust to your desired size */
+}
+
+.logo-lacoamarelo {
+    width: 50px;
+    /* Adjust to your desired size */
+}
+
+/* Texto acima do contador */
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    margin-top: 5%;
+}
+
+.text-title-counter {
+    font-size: 170%;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+.text-subtitle-counter {
+    font-size: 150%;
+    font-weight: 300;
+    color: #333;
+    text-align: center;
+}
+
+/* Seção do contador */
+.counter-section {
+    background-color: white;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+}
+
+#counter {
+    font-size: 5rem;
+    color: #333;
+}
+
+/* Seção dos textos */
+.yellow-line {
+    font-size: 150%;
+    font-style: italic;
+    font-weight: 700;
+    color: #dfb50d;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.text-subtitle-container {
+    font-size: 170%;
+    font-weight: 600;
+    font-style: italic;
+    color: #333;
+    margin-top: 8%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    text-align: left;
+}
+
+.black-section {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+}
+
+.text-text-container {
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    font-style: italic;
+    font-weight: lighter;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 2rem;
+}
+
+.black-section-title {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Seção dos cards */
+.card-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.card {
+    background-color: #d3d3d3;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px #a1a1a1;
+    border-radius: 10%;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.1);
+}
+
+.a-help {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Seção amarela com um iframe */
+.iframe-section {
+    background-color: #CB9BDE;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iframe-section iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de display de filmes */
+.movie-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+/* Setas */
+.arrow {
+    font-size: 3rem;
+    color: #333;
+    cursor: pointer;
+    padding: 0 20px;
+    user-select: none;
+    z-index: 9997;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 0;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 0;
+}
+
+/* Movie container */
+.movie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    width: 100%;
+    /* Ensure full width */
+    overflow: hidden;
+}
+
+.movie {
+    flex-shrink: 0;
+    margin: 0 10px;
+    opacity: 0.5;
+    /* Default opacity for side images */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.movie img {
+    width: 150px;
+    height: auto;
+}
+
+.movie.big img {
+    width: 200px;
+    opacity: 1;
+}
+
+.movie-container .movie:first-child,
+.movie-container .movie:last-child {
+    opacity: 0.3;
+}
+
+.movie:hover {
+    transform: scale(1.1);
+}
+
+/* Botão de ajuda */
+.info-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.info-button img {
+    width: 50px;
+    height: auto;
+}
+
+.info-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffdf80;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9998;
+    max-width: 300px;
+    text-align: center;
+}
+
+/* Seção do rodapé */
+.footer-section {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    font-family: Arial, sans-serif;
+    margin-top: 2rem;
+}
+
+/* Tabela do rodapé*/
+
+table {
+    width: 100%;
+}
+
+.p-tabela-rodape {
+    text-align: left;
+    margin-left: 5rem;
+    margin-top: 0.4rem;
+    font-size: 2rem;
+}
+
+.p-tabela-rodape-especial {
+    text-align: left;
+    margin-left: 5rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #ffdd00;
+}
+
+.th-image {
+    text-align: left;
+}
+
+.name-tag-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+/* Seção - Dicas de Prevenção*/
+
+hr {
+    border-color: #ffdd00;
+    border-width: 2px;
+    margin-top: 5%;
+}
+
+/* Estilo do cabeçalho */
+.header1 {
+    background-color: #cb9bde;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    border-bottom: 4px solid #ffdd00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do contêiner */
+.container-dica {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2em 0;
+    padding: 0 1em;
+}
+
+/* Estilo das dicas */
+.dica {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre as dicas */
+.dica:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo dos títulos dentro das dicas */
+.dica h2 {
+    color: #ffdd00;
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 2px solid #ffdd00;
+    padding-bottom: 10px;
+}
+
+/* Estilo dos parágrafos dentro das dicas */
+.dica p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+    padding-top: 20px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 900px) {
+    .container-dica {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dica {
+        width: 90%;
+        margin: 1em 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .header1 {
+        font-size: 1.5em;
+    }
+
+    .dica {
+        width: 95%;
+        margin: 1em 0;
+    }
+}
+
+/* Estilo para a imagem */
+.img-dica {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: #fff;
+}
+
+.img-dica img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #cb9bde;
+    border-radius: 4%;
+}
+
+/* Tabela Homem Vs Mulher */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin: 0 auto;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-table {
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        height: 300px;
+        /* Ajuste a altura para dispositivos menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        font-size: 1rem;
+    }
+}
